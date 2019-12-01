@@ -1,0 +1,76 @@
+
+body {
+    background: #22252e;
+    color: #cecdd3;
+    text-align: center;
+    font-size: 24px;
+}
+
+#horizontal-ruler {
+    /*width: 60%;*/
+    /*margin: 0 auto;*/
+    /*border: 1px solid #9fcdff;*/
+    /*border-radius: 50%;*/
+
+    height: 2px;
+    background-color: #9BE7FF;
+    width: 60%;
+    margin: 0 auto;
+    background-image: linear-gradient(left , #22252e 2%, #DAF5FF 50%, #22252e 98%);
+    background-image: -o-linear-gradient(left , #22252e 2%, #DAF5FF 50%, #22252e 98%);
+    background-image: -moz-linear-gradient(left , #22252e 2%, #DAF5FF 50%, #22252e 98%);
+    background-image: -webkit-linear-gradient(left , #22252e 2%, #DAF5FF 50%, #22252e 98%);
+    background-image: -ms-linear-gradient(left , #22252e 2%, rgb(218, 245, 255) 50%, #22252e 98%);
+    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, #22252e), color-stop(0.5, #9be7ff), color-stop(0.98, #22252e) );
+}
+
+
+#speed-loader .speed-type {
+    font-family: 'Comfortaa', cursive;
+}
+
+.speed-value, .speed-unit {
+    display: inline-block;
+}
+
+#speed-loader.latency .speed-type {
+    text-transform: capitalize;
+}
+
+#speed-loader .speed-unit {
+    color: #dee2e6;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#speed-loader.upload, #speed-loader.download {
+    /*font-weight: bold;*/
+    text-transform: uppercase;
+}
+
+#speed-loader.download {
+    color: #7fdfff;
+}
+
+#speed-loader.upload {
+    color: #e398ff;
+}
+
+#speed-loader.latency {
+    color: #eaeaea;
+}
+
+#connecting-text {
+    color: #cecdd3;
+    text-align: center;
+    font-family: 'Squada One', cursive;
+    font-size: 18px;
+}
+
+#connecting-gif-row {
+    text-align: center;
+}
+
+#internet-speed-elements {
+    color: #9dd7ff;
+}

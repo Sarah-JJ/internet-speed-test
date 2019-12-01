@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="h-100">
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+
+    <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body class="h-100">
+
+<div id="app" class="container-fluid d-flex h-50 align-items-center">
+    <div class="container">
+
+        <div id="speed-loader" class="d-none"></div>
+
+
+        <div id="connecting-loader-container" class="mb-5">
+
+            <div id="connecting-gif-row" class="row">
+                <div class="col">
+                    <img id="connecting-gif" width="400" height="95" src="/images/connecting.gif">
+                </div>
+            </div>
+            <div id="connecting-text" class="row">
+                <div class="col">Connecting</div>
+            </div>
+        </div>
+
+        <div id="horizontal-ruler" class="d-none"></div>
+
+    </div>
+
+</div>
+
+<div id="internet-speed-elements" class="container-fluid h-50">
+    <div class="row justify-content-center">
+        <div id="latency" class="col-4"></div>
+        <div id="downloadSpeed" class="col-4 d-none"></div>
+        <div id="uploadSpeed" class="col-4 d-none"></div>
+
+    </div>
+</div>
+
+<script src="./javascripts/main.js" type="text/javascript"></script>
+
+</body>
+</html>
