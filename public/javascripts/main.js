@@ -10,11 +10,11 @@ let horizontalRulerElement = document.getElementById("horizontal-ruler");
 let options = {
     // fileUrl: "https://media.wired.com/photos/5c1ae77ae91b067f6d57dec0/master/w_2560%2Cc_limit/Comparison-City-MAIN-ART.jpg",
     // fileUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/ESO-The_Omega_Nebula-phot-25a-09-fullres.jpg/3069px-ESO-The_Omega_Nebula-phot-25a-09-fullres.jpg",
-    // fileUrl: "../images/3069.jpg",
-    fileUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/ESO-The_Omega_Nebula-phot-25a-09-fullres.jpg/600px-ESO-The_Omega_Nebula-phot-25a-09-fullres.jpg",
+    fileUrl: "../images/3069.jpg",
+    // fileUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/ESO-The_Omega_Nebula-phot-25a-09-fullres.jpg/600px-ESO-The_Omega_Nebula-phot-25a-09-fullres.jpg",
     // fileUrl: "https://images.unsplash.com/photo-1573542625226-956e54f63571?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEwNDEzMH0?client_id=33e7deece145d5167a15396f3e6bfc0d8447bd6b42cbdc01201c53c20a6b2da6",
-    timesToPing: 1,
-    timesToDownload: 1,
+    timesToPing: 10,
+    timesToDownload: 10,
     timesToUpload: 10
 }
 
@@ -80,7 +80,6 @@ function showErrorPage() {
     let alertContent = document.createTextNode("Something went wrong. Check your internet connection, and try again later.");
     let alert = document.createElement("div");
     alert.appendChild(alertContent);
-    alert.classList = "alert alert-warning";
-    alert.role = "alert";
+    alert.id = "connection-error";
     document.querySelector('body').appendChild(alert);
 }

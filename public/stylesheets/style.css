@@ -6,6 +6,11 @@ body {
     font-size: 24px;
 }
 
+#connection-error{
+    color: #fece68;
+    border: 1px solid #fece68;
+}
+
 #horizontal-ruler {
     /*width: 60%;*/
     /*margin: 0 auto;*/
