@@ -13,8 +13,8 @@
 
 <body class="h-100">
 
-<div id="app" class="container-fluid d-flex h-50 align-items-center">
-    <div class="container">
+<div id="app" class="container-fluid d-flex h-50 align-items-center f-24">
+    <div class="container text-center">
 
         <div id="speed-loader" class="d-none"></div>
 
@@ -37,12 +37,25 @@
 
 </div>
 
-<div id="internet-speed-elements" class="container-fluid h-50">
+<div id="internet-speed-elements" class="container-fluid h-50 f-24">
     <div class="row justify-content-center">
         <div id="latency" class="col-4"></div>
         <div id="downloadSpeed" class="col-4 d-none"></div>
         <div id="uploadSpeed" class="col-4 d-none"></div>
 
+    </div>
+</div>
+
+<div id="connection-error-container" class="container-fluid d-flex align-items-center h-100 d-none">
+    <div id="connection-error" class="row">
+
+        <div class="card text-white bg-dark mb-3">
+            <div class="card-body">
+                <!--                <img src="/home/sarahj/Dev Transition Project/internet-speed-test/public/images/error.png" width="60" height="60">-->
+                <h5 class="card-title text-center">Connection Lost</h5>
+                <p class="card-text">Something went wrong. Check your internet connection, and try again later.</p>
+            </div>
+        </div>
     </div>
 </div>
 
