@@ -22,6 +22,8 @@
     <li class="complete">Regularly delete files from uploads folder</li>
     <li>Make the speed update only on regular intervals</li>
     <li>Have the page try to reconnect every second, on no-connection</li>
+    <li>Add percentage</li>
+    <li>Add a gauge</li>
 </ul>
 
 <ul>Questions:
@@ -58,23 +60,13 @@
 <ul>
     Clean Code:
     <li class="important">separate worker logic into 2 or 3 workers</li>
-    <li>contemplate my route handling and where to place the test routes</li>
-    <li>if "isComplete" variable is never used, remove from worker message object </li>
     <li>remove the unnecessary bootstrap rules, and only keep the used ones</li>
     <li>move multer into a separate module and create middleware directory and validation module</li>
 </ul>
 
 <ul>
     ERRORS to fix:
-    <li class="complete">Images path is adding "/javascripts", the images are not loading!!</li>
 </ul>
 
-<ul>
-    Security Measures:
-    <li>Find out the ways an upload can be malicious</li>
-    <li>Send the accepted upload data size from the server, and validate against it</li>
-    <li>Find out where to keep such information: upload data size and type</li>
-    <li>Investigate the security regarding uploads folder location, and whether it should be inside the public folder</li>
-</ul>
 </body>
 </html>

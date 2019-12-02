@@ -19,19 +19,19 @@ onmessage = function (e) {
         let timesToPing = e.data.timesToPing;
 
         for (let i = 0; i < timesToPing; i++) {
-                console.log("i = " + i);
-                let startTime = Date.now();
-                await fetch(fileUrl, {method: 'HEAD', cache: 'reload'})
-                    .then(() => {
-                        let endTime = Date.now();
-                        let rtt = endTime - startTime;
-                        console.log(rtt);
-                        pingRTTInstances.push(rtt);
-                        postMessage({type: "latency", value: formatRTT(rtt), isComplete: false});
-                    }).catch((error) => {
-                        postMessage({type: "error", value: error.message})
-                        // console.log('There has been a problem with your fetch operation: ' + error);
-                    });
+            console.log("i = " + i);
+            let startTime = Date.now();
+            await fetch(fileUrl, {method: 'HEAD', cache: 'reload'})
+                .then(() => {
+                    let endTime = Date.now();
+                    let rtt = endTime - startTime;
+                    console.log(rtt);
+                    pingRTTInstances.push(rtt);
+                    postMessage({type: "latency", value: formatRTT(rtt), isComplete: false});
+                }).catch((error) => {
+                    postMessage({type: "error", value: error.message})
+                    // console.log('There has been a problem with your fetch operation: ' + error);
+                });
         }
         let sum = pingRTTInstances.reduce((a, b) => a + b);
         let average = sum / pingRTTInstances.length;
@@ -60,17 +60,22 @@ onmessage = function (e) {
                         console.log(downloadSpeedInstance);
 
                         downloadSpeedInstances.push(downloadSpeedInstance);
-                        postMessage({type: "download", value: formatSpeed(downloadSpeedInstance), isComplete: false});
+                        postMessage({
+                            type: "download",
+                            iteration: i+1,
+                            value: formatSpeed(downloadSpeedInstance),
+                            isComplete: false
+                        });
                         uploadFileBlob = fileBlob;
                     }
                 )
                 .catch((error) => {
-                    console.log('There has been a problem with your fetch operation: ' + error.message);
+                    postMessage({type: "error", value: error.message})
                 })
         }
         let sum = downloadSpeedInstances.reduce((a, b) => a + b);
         let average = sum / downloadSpeedInstances.length;
-        postMessage({type: "download", value: formatSpeed(average), isComplete: true});
+        postMessage({type: "download", iteration: timesToDownload, value: formatSpeed(average), isComplete: true});
 
         console.log(downloadSpeedInstances);
         console.log(average);
@@ -84,7 +89,7 @@ onmessage = function (e) {
         // formData.append('type', 'file');
         formData.append('image', uploadFileBlob);
 
-        for (let i = 0; i < timesToUpload; i++) {
+        for (i = 0; i < timesToUpload; i++) {
             console.log("i = " + i);
             let startTime = Date.now();
             let endTime;
@@ -99,7 +104,12 @@ onmessage = function (e) {
                         console.log(uploadTime + " S");
                         let uploadSpeedInstance = (uploadFileBlob.size * 0.000008) / uploadTime; //convert file size from byte to megabit
                         uploadSpeedInstances.push(uploadSpeedInstance);
-                        postMessage({type: "upload", value: formatSpeed(uploadSpeedInstance), isComplete: false});
+                        postMessage({
+                            type: "upload",
+                            iteration: i+1,
+                            value: formatSpeed(uploadSpeedInstance),
+                            isComplete: false
+                        });
                     }
                 )
                 .catch((error) => {
@@ -108,7 +118,7 @@ onmessage = function (e) {
         }
         let sum = uploadSpeedInstances.reduce((a, b) => a + b);
         let average = sum / uploadSpeedInstances.length;
-        postMessage({type: "upload", value: formatSpeed(average), isComplete: true});
+        postMessage({type: "upload", iteration: timesToUpload, value: formatSpeed(average), isComplete: true});
 
         console.log(uploadSpeedInstances);
         console.log(average);
@@ -117,16 +127,19 @@ onmessage = function (e) {
 
 function formatSpeed(speedInMbps) {
     if (speedInMbps < 1)
-        return {speed: Math.round(speedInMbps * 1000), unit: "kbps"};
+        return {speed: Math.round(speedInMbps * 1000), unit: "Kbps"};
     if (speedInMbps <= 999)
-        return {speed: Math.round(speedInMbps), unit: "mbps"};
-    else return {speed: Math.round(speedInMbps / 1000), unit: "gbps"};
+        return {speed: Math.round(speedInMbps), unit: "Mbps"};
+    else return {speed: Math.round(speedInMbps / 1000), unit: "Gbps"};
 }
 
 function formatRTT(rtt) {
     return {latency: Math.round(rtt), unit: "ms"}
 }
 
+function calculatePercentage() {
+
+}
 
 function wait(ms) {
     return new Promise(function (resolve) {

@@ -37,9 +37,6 @@ router.get('/remove-on-prdct', (req, res, next) => {
 });
 
 router.post('/', upload.single('image'), (req, res, next) => {
-    console.log("--------------")
-    console.log(req.file);
-    console.log(req.file.size)
     res.sendStatus(200);
 });
 

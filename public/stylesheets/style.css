@@ -1,17 +1,20 @@
 body {
     background: #22252e;
     color: #cecdd3;
-    text-align: center;
 }
+
 .f-24{
     font-size: 1.3rem;
 }
 
-
-#connection-error{
-    padding: 40px;
-    margin: 0 auto;
+.f-1rem{
+font-size: 1.1rem;
 }
+
+/*#connection-error{*/
+/*    padding: 40px;*/
+/*    margin: 0 auto !important;*/
+/*}*/
 
 #speed-loader .speed-type {
     font-family: 'Comfortaa', cursive;
@@ -31,7 +34,7 @@ body {
     font-weight: bold;
 }
 
-#speed-loader.upload, #speed-loader.download {
+#speed-loader.upload .speed-type, #speed-loader.download .speed-type {
     /*font-weight: bold;*/
     text-transform: uppercase;
 }
@@ -55,9 +58,9 @@ body {
     font-size: 18px;
 }
 
-#connecting-gif-row {
-    text-align: center;
-}
+/*#connecting-gif-row {*/
+/*    text-align: center;*/
+/*}*/
 
 #internet-speed-elements {
     color: #9dd7ff;
@@ -65,11 +68,6 @@ body {
 
 
 #horizontal-ruler {
-    /*width: 60%;*/
-    /*margin: 0 auto;*/
-    /*border: 1px solid #9fcdff;*/
-    /*border-radius: 50%;*/
-
     height: 2px;
     background-color: #9BE7FF;
     width: 60%;
@@ -82,6 +80,27 @@ body {
     background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, #22252e), color-stop(0.5, #9be7ff), color-stop(0.98, #22252e) );
 }
 
+#progress-bar {
+    width: 30%;
+    background-color: #9d9d9d;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: right; /* To center it horizontally (if you want) */
+    line-height: 15px;
+}
+
+#progress-percentage{
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#progress-value {
+    width: 50%;
+    height: 13px;
+    /*background-color: #26d0ea;*/
+    border-radius: 5px;
+}
 
 /*BOOTSTRAP*/
 /*//////////////////////////////////////*/

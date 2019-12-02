@@ -43,10 +43,8 @@ app.use(function (err, req, res, next) {
     res.render('error');
 });
 
-
-cron.schedule('0 * * * *', function () {
+cron.schedule('* * * * *', function () {
     cmd.run('rm -rf ./uploads/*');
-    console.log('Running Cron Job');
 });
 
 module.exports = app;
