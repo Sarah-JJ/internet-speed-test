@@ -5,8 +5,8 @@ let options = {
     // fileUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/ESO-The_Omega_Nebula-phot-25a-09-fullres.jpg/600px-ESO-The_Omega_Nebula-phot-25a-09-fullres.jpg",
     // fileUrl: "https://images.unsplash.com/photo-1573542625226-956e54f63571?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEwNDEzMH0?client_id=33e7deece145d5167a15396f3e6bfc0d8447bd6b42cbdc01201c53c20a6b2da6",
     timesToPing: 20,
-    timesToDownload: 15,
-    timesToUpload: 80
+    timesToDownload: 5,
+    timesToUpload: 4
 }
 
 window.addEventListener('load', () => {
