@@ -19,13 +19,13 @@ onmessage = function (e) {
         let timesToPing = e.data.timesToPing;
 
         for (let i = 0; i < timesToPing; i++) {
-            console.log("i = " + i);
+            // console.log("i = " + i);
             let startTime = Date.now();
             await fetch(fileUrl, {method: 'HEAD', cache: 'reload'})
                 .then(() => {
                     let endTime = Date.now();
                     let rtt = endTime - startTime;
-                    console.log(rtt);
+                    // console.log(rtt);
                     pingRTTInstances.push(rtt);
                     postMessage({type: "latency", value: formatRTT(rtt), isComplete: false});
                 }).catch((error) => {
@@ -36,9 +36,9 @@ onmessage = function (e) {
         let sum = pingRTTInstances.reduce((a, b) => a + b);
         let average = sum / pingRTTInstances.length;
         postMessage({type: "latency", value: formatRTT(average), isComplete: true});
-
-        console.log(pingRTTInstances);
-        console.log(average);
+        //
+        // console.log(pingRTTInstances);
+        // console.log(average);
     }
 
     async function calculateDownloadSpeed() {
@@ -120,8 +120,8 @@ onmessage = function (e) {
         let average = sum / uploadSpeedInstances.length;
         postMessage({type: "upload", iteration: timesToUpload, value: formatSpeed(average), isComplete: true});
 
-        console.log(uploadSpeedInstances);
-        console.log(average);
+        // console.log(uploadSpeedInstances);
+        // console.log(average);
     }
 }
 

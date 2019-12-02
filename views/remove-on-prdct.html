@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Tips for me</title>
+
     <style>
         .important {
             color: #db0a3a;
@@ -15,46 +16,35 @@
             color: rgba(192, 192, 192, 0.84);
         }
     </style>
+
 </head>
 <body>
-<ul class="complete">To do:
-    <li class="complete">Find out what HTTP gzipping is, and how to avoid it</li>
-    <li class="complete">Regularly delete files from uploads folder</li>
+<ul>To do:
     <li>Make the speed update only on regular intervals</li>
     <li>Have the page try to reconnect every second, on no-connection</li>
     <li>Add percentage</li>
     <li>Add a gauge</li>
+    <li>Make it better responsive</li>
 </ul>
 
 <ul>Questions:
     <li>Should I make multiple POST requests, or upload a multiplication of the same file many times</li>
-    <li class="complete">How often must the cron job delete the uploaded files</li>
 </ul>
 
 <ul> ON PRODUCTION:
     <li>remove nodemon from dependencies</li>
-    <li>change "nodemon ./bin/www" back to "node ./bin/www" in the www.js file</li>
-    <li>remove ./javascripts/Garbage directory!</li>
+    <li>change "nodemon ./bin/www" back to "node ./bin/www" in the package.json file</li>
+    <li>remove all console.logs from client side</li>
 </ul>
 
 <ul> Features:
     <li>make the test time-limited</li>
-    <li class="complete">!! Should I use blob.size instead of static size! -- different output!!</li>
-    <li class="important">Handle all error types and no connection gracefully</li>
-    <li class="complete">Modify view speed Unit based on speed: Kb, Mb, Gb</li>
+    <li class="important complete">Handle all error types and no connection gracefully</li>
     <li>handle whether to display the decimal points</li>
     <li>make the nice fluctuating line for ping OR add loading indicator OR add percentage</li>
-    <li class="inactive">modify maximum speedometer speed according to user internet speed</li>
     <li>add redo test button</li>
-    <li>create an admin panel to control speed test specifics
-    <ul>Allow the admin to do the following:
-        <li>upload the file to be tested against</li>
-        <li>set the number of test download, upload, and ping times</li>
-    </ul>
-    </li>
     <li>display server name and IP address</li>
     <li>animate the horizontal-ruler and speeds placement</li>
-
 </ul>
 
 <ul>
@@ -62,6 +52,8 @@
     <li class="important">separate worker logic into 2 or 3 workers</li>
     <li>remove the unnecessary bootstrap rules, and only keep the used ones</li>
     <li>move multer into a separate module and create middleware directory and validation module</li>
+    <li>work on the naming</li>
+    <li>remove unused IDs</li>
 </ul>
 
 <ul>

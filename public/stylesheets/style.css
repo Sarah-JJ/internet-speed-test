@@ -48,7 +48,8 @@ font-size: 1.1rem;
 }
 
 #speed-loader.latency {
-    color: #eaeaea;
+    /*color: #eaeaea;*/
+    color: #f2c28f;
 }
 
 #connecting-text {
@@ -89,7 +90,7 @@ font-size: 1.1rem;
     line-height: 15px;
 }
 
-#progress-percentage{
+#progress-bar-label{
     color: white;
     font-size: 12px;
     font-weight: bold;

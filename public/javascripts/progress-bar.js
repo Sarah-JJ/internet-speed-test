@@ -1,16 +1,24 @@
+let progressValue = document.getElementById("progress-value");
+let progressPercentage = document.getElementById("progress-bar-label");
+
 function showProgressBar() {
     let progressBar = document.getElementById("progress-bar");
     progressBar.classList.remove("d-none");
 }
 
-function updateProgressBar(color, iteration, maximumValue) {
+function updateProgressBar(color, currentValue, maximumValue) {
     let width = 0;
-    let progressValue = document.getElementById("progress-value");
-    let progressPercentage = document.getElementById("progress-percentage");
-
-    width = Math.round((iteration / maximumValue) * 100);
+    width = Math.round((currentValue / maximumValue) * 100);
     progressValue.style.width = width + "%";
-    progressPercentage.innerHTML = width + "%";
     progressValue.style.background = color;
+    changeProgressBarLabel("Loading")
 
+}
+
+function changeProgressBarColor(color) {
+    progressValue.style.background = color;
+}
+
+function changeProgressBarLabel(label) {
+    progressPercentage.innerHTML = label;
 }
