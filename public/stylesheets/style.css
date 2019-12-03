@@ -83,7 +83,7 @@ font-size: 1.1rem;
 
 #progress-bar {
     width: 30%;
-    background-color: #9d9d9d;
+    background-color: #22252E;
     margin: 0 auto;
     border-radius: 5px;
     text-align: right; /* To center it horizontally (if you want) */
@@ -98,7 +98,7 @@ font-size: 1.1rem;
 
 #progress-value {
     width: 50%;
-    height: 13px;
+    height: 1px;
     /*background-color: #26d0ea;*/
     border-radius: 5px;
 }

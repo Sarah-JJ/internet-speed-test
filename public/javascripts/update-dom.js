@@ -48,8 +48,9 @@ function outputToInternetSpeedElements(resultInstance) {
             }
             case "upload": {
                 uploadSpeedElement.outerHTML = speedLoaderElement.outerHTML;
+                // uploadSpeedElement.insertBefore('',  '<img src="/images/upload.png" width="30px" height="30px" class="mr-1" alt="client icon">');
                 uploadSpeedElement.classList.remove("d-none");
-                changeProgressBarLabel("Complete");
+                changeProgressBarLabel("");
                 changeProgressBarColor("#55db5f");
                 break;
             }

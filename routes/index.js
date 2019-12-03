@@ -25,10 +25,14 @@ const upload = multer({
     ,
     limits: {fileSize: allowedFileSize},
     fileFilter: fileFilter
-})
+});
+
+var os = require("os");
+var hostname = os.hostname();
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
+    console.log(hostname);
     res.render('index.ejs', {title: 'Internet Speed Test'});
 });
 

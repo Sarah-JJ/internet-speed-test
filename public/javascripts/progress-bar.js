@@ -11,7 +11,7 @@ function updateProgressBar(color, currentValue, maximumValue) {
     width = Math.round((currentValue / maximumValue) * 100);
     progressValue.style.width = width + "%";
     progressValue.style.background = color;
-    changeProgressBarLabel("Loading")
+    // changeProgressBarLabel("Loading")
 
 }
 

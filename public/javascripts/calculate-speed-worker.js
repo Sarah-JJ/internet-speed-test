@@ -21,7 +21,7 @@ onmessage = function (e) {
         for (let i = 0; i < timesToPing; i++) {
             // console.log("i = " + i);
             let startTime = Date.now();
-            await fetch(fileUrl, {method: 'HEAD', cache: 'reload'})
+           await fetch(fileUrl, {method: 'HEAD', cache: 'reload'})
                 .then(() => {
                     let endTime = Date.now();
                     let rtt = endTime - startTime;
@@ -32,7 +32,8 @@ onmessage = function (e) {
                     postMessage({type: "error", value: error.message})
                     // console.log('There has been a problem with your fetch operation: ' + error);
                 });
-        }
+            }
+
         let sum = pingRTTInstances.reduce((a, b) => a + b);
         let average = sum / pingRTTInstances.length;
         postMessage({type: "latency", value: formatRTT(average), isComplete: true});
@@ -129,17 +130,14 @@ function formatSpeed(speedInMbps) {
     if (speedInMbps < 1)
         return {speed: Math.round(speedInMbps * 1000), unit: "Kbps"};
     if (speedInMbps <= 999)
-        return {speed: Math.round(speedInMbps), unit: "Mbps"};
-    else return {speed: Math.round(speedInMbps / 1000), unit: "Gbps"};
+        return {speed: Math.round(speedInMbps*100)/100, unit: "Mbps"};
+    else return {speed: Math.round((speedInMbps / 1000)*100)/100, unit: "Gbps"};
 }
 
 function formatRTT(rtt) {
     return {latency: Math.round(rtt), unit: "ms"}
 }
 
-function calculatePercentage() {
-
-}
 
 function wait(ms) {
     return new Promise(function (resolve) {
