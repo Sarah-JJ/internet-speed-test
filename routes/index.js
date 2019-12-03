@@ -30,7 +30,8 @@ const upload = multer({
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-    console.log(req.connection.remoteAddress)
+    console.log(req.connection.remoteAddress);
+    console.log(req.headers.host);
     res.render('index.ejs', {title: 'Internet Speed Test'});
 });
 
