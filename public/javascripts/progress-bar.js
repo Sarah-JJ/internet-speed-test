@@ -1,12 +1,12 @@
 let progressValue = document.getElementById("progress-value");
-let progressPercentage = document.getElementById("progress-bar-label");
+let progressBarLabel = document.getElementById("progress-bar-label");
 
 function showProgressBar() {
     let progressBar = document.getElementById("progress-bar");
     progressBar.classList.remove("d-none");
 }
 
-function updateProgressBar(color, currentValue, maximumValue) {
+function updateProgressBar(color, currentValue, maximumValue, direction) {
     let width = 0;
     width = Math.round((currentValue / maximumValue) * 100);
     progressValue.style.width = width + "%";
@@ -20,5 +20,5 @@ function changeProgressBarColor(color) {
 }
 
 function changeProgressBarLabel(label) {
-    progressPercentage.innerHTML = label;
+    progressBarLabel.innerHTML = label;
 }

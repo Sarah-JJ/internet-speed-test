@@ -13,7 +13,7 @@
 
 <body class="h-100">
 
-<div class="container-fluid d-flex h-50 align-items-center f-24">
+<div id="parent-container" class="container-fluid d-flex h-100 align-items-center f-24">
     <div id="loaders" class="container text-center">
 
         <div id="speed-loader" class="d-none"></div>
@@ -60,49 +60,19 @@
 
 <div id="internet-speed-elements" class="container-fluid h-50 f-24 text-center position-relative">
     <div class="row justify-content-center">
-        <div id="latency" class="col-md-4 col-sm-1"></div>
-        <div id="downloadSpeed" class="col-md-4 col-sm-1 d-none"></div>
-        <div id="uploadSpeed" class="col-md-4 col-sm-1 d-none"></div>
+        <div id="latency" class="speed-element latency col-md-2 col-sm-1"></div>
+        <div id="download-speed" class="speed-element download col-md-2 col-sm-1 d-none"></div>
+        <div id="upload-speed" class="speed-element upload col-md-2 col-sm-1 d-none"></div>
     </div>
 
-    <div class="row justify-content-center position-absolute w-100" style="bottom: 30px">
-        <div class="col-md-4 col-sm-12 d-inline-block">
-            <img src="/images/monitor2.png" width="20px" height="20px" class="mr-1" alt="client icon"> 132.10.24.200
-        </div>
-        <div class="col-md-4 col-sm-12 d-inline-block">
-            <img src="/images/server.png" class="mr-1" width="20px" height="20px" alt="server icon"> Earthlink, Baghdad
-        </div>
-    </div>
-
-</div>
-
-
-<!--TEST-->
-
-<div id="internet-speed-elementsss" class="container-fluid h-50 text-center position-relative f-1rem">
-    <div class="row justify-content-center">
-        <div id="speed-loader" class="latency m-5">
-<!--            <div class="speed-type">latency</div>-->
-            <img src="/images/ping.png" class="mr-1 flex-wrap" alt="client icon" width="22px" height="22px">
-
-            <div class="speed-value">8</div>
-            <div class="speed-unit">ms</div>
-        </div>
-        <div id="speed-loader" class="download m-5">
-<!--            <div class="speed-type">download</div>-->
-            <img src="/images/download.png" class="mr-1 flex-wrap" alt="client icon" width="22px" height="22px">
-            <div class="speed-value">402</div>
-            <div class="speed-unit">Mbps</div>
-        </div>
-        <div id="speed-loader" class="upload m-5">
-            <img src="/images/upload.png" class="mr-1 flex-wrap" alt="client icon" width="22px" height="22px">
-<!--            <div class="speed-type">upload</div>-->
-            <div class="speed-value">902</div>
-            <div class="speed-unit">Mbps</div>
-
-
-        </div>
-    </div>
+    <!--    <div class="row justify-content-center position-absolute w-100" style="bottom: 30px">-->
+    <!--        <div class="col-md-4 col-sm-12 d-inline-block">-->
+    <!--            <img src="/images/monitor2.png" width="20px" height="20px" class="mr-1" alt="client icon"> 132.10.24.200-->
+    <!--        </div>-->
+    <!--        <div class="col-md-4 col-sm-12 d-inline-block">-->
+    <!--            <img src="/images/server.png" class="mr-1" width="20px" height="20px" alt="server icon"> Earthlink, Baghdad-->
+    <!--        </div>-->
+    <!--    </div>-->
 
 </div>
 

@@ -1,13 +1,13 @@
-function getTimesToTest(resultInstanceType) {
-    if (resultInstanceType === "download")
+function getTimesToTest(instanceType) {
+    if (instanceType === "download")
         return options.timesToDownload;
-    else if (resultInstanceType === "upload")
+    else if (instanceType === "upload")
         return options.timesToUpload;
 }
 
-function getTestTypeColor(resultInstanceType) {
-    if (resultInstanceType === "download")
+function getInstanceTypeColor(instanceType) {
+    if (instanceType === "download")
         return "#26d0ea"
-    else if (resultInstanceType === "upload")
+    else if (instanceType === "upload")
         return "#e398ff";
 }

@@ -11,12 +11,7 @@ body {
 font-size: 1.1rem;
 }
 
-/*#connection-error{*/
-/*    padding: 40px;*/
-/*    margin: 0 auto !important;*/
-/*}*/
-
-#speed-loader .speed-type {
+.speed-type {
     font-family: 'Comfortaa', cursive;
 }
 
@@ -24,30 +19,30 @@ font-size: 1.1rem;
     display: inline-block;
 }
 
-#speed-loader.latency .speed-type {
+.latency .speed-type {
     text-transform: capitalize;
 }
 
-#speed-loader .speed-unit {
+.speed-unit {
     color: #dee2e6;
     font-size: 14px;
     font-weight: bold;
 }
 
-#speed-loader.upload .speed-type, #speed-loader.download .speed-type {
+.upload .speed-type, .download .speed-type {
     /*font-weight: bold;*/
     text-transform: uppercase;
 }
 
-#speed-loader.download {
+.download {
     color: #7fdfff;
 }
 
-#speed-loader.upload {
+.upload {
     color: #e398ff;
 }
 
-#speed-loader.latency {
+.latency {
     /*color: #eaeaea;*/
     color: #f2c28f;
 }
@@ -59,9 +54,6 @@ font-size: 1.1rem;
     font-size: 18px;
 }
 
-/*#connecting-gif-row {*/
-/*    text-align: center;*/
-/*}*/
 
 #internet-speed-elements {
     color: #9dd7ff;
@@ -98,7 +90,7 @@ font-size: 1.1rem;
 
 #progress-value {
     width: 50%;
-    height: 1px;
+    height: 8px;
     /*background-color: #26d0ea;*/
     border-radius: 5px;
 }
