@@ -27,12 +27,10 @@ const upload = multer({
     fileFilter: fileFilter
 });
 
-var os = require("os");
-var hostname = os.hostname();
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-    console.log(hostname);
+    console.log(req.connection.remoteAddress)
     res.render('index.ejs', {title: 'Internet Speed Test'});
 });
 
