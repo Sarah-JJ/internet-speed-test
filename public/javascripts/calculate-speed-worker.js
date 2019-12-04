@@ -6,7 +6,7 @@ onmessage = function (e) {
 
     async function calculateInternetSpeed() {
         await calculatePingRTT();
-        console.log("ping latency complete");
+        console.log("ping ping complete");
         await calculateDownloadSpeed();
         console.log("downspeed test complete");
         await calculateUploadSpeed();
@@ -27,7 +27,7 @@ onmessage = function (e) {
                     let rtt = endTime - startTime;
                     // console.log(rtt);
                     pingRTTInstances.push(rtt);
-                    postMessage({type: "latency", value: formatRTT(rtt), isComplete: false});
+                    postMessage({type: "ping", value: formatRTT(rtt), isComplete: false});
                 }).catch((error) => {
                     postMessage({type: "error", value: error.message})
                     // console.log('There has been a problem with your fetch operation: ' + error);
@@ -36,7 +36,7 @@ onmessage = function (e) {
 
         let sum = pingRTTInstances.reduce((a, b) => a + b);
         let average = sum / pingRTTInstances.length;
-        postMessage({type: "latency", value: formatRTT(average), isComplete: true});
+        postMessage({type: "ping", value: formatRTT(average), isComplete: true});
         //
         // console.log(pingRTTInstances);
         // console.log(average);
@@ -135,7 +135,7 @@ function formatSpeed(speedInMbps) {
 }
 
 function formatRTT(rtt) {
-    return {latency: Math.round(rtt), unit: "ms"}
+    return {ping: Math.round(rtt), unit: "ms"}
 }
 
 

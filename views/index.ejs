@@ -24,10 +24,7 @@
         </div>
         <div id="progress-bar-label"></div>
 
-        <!--&lt;!&ndash;        Redo test button&ndash;&gt;-->
-        <!--        <button type="button" class="btn" onclick="window.location.reload()" style="border-radius: 50%">-->
-        <!--            <img src="https://image.flaticon.com/icons/png/128/122/122666.png"alt="submit" width="35px" height="35px"/>-->
-        <!--        </button>-->
+
 
         <div id="connecting-loading-indicator-container" class="mb-5">
 
@@ -58,29 +55,28 @@
 
 </div>
 
-<div id="internet-speed-elements" class="container-fluid h-50 f-24 text-center position-relative">
-    <div class="row justify-content-center">
-        <div id="latency" class="speed-element latency col-md-2 col-sm-1"></div>
-        <div id="download-speed" class="speed-element download col-md-2 col-sm-1 d-none"></div>
-        <div id="upload-speed" class="speed-element upload col-md-2 col-sm-1 d-none"></div>
+<div id="internet-speed-elements" class="container-fluid h-75 f-24 text-center position-relative d-none">
+
+    <div class="row card mb-3 mx-auto h-25 bg-dark" style="width: 60%">
+
+        <div class="card-body w-100">
+
+            <div id="ping" class="speed-element ping card-text d-inline-block mx-5"></div>
+            <div id="download-speed" class="speed-element download card-text d-inline-block mx-5 d-none"></div>
+            <div id="upload-speed" class="speed-element upload card-text d-inline-block mx-5 d-none"></div>
+
+        </div>
+
     </div>
 
-    <!--    <div class="row justify-content-center position-absolute w-100" style="bottom: 30px">-->
-    <!--        <div class="col-md-4 col-sm-12 d-inline-block">-->
-    <!--            <img src="/images/monitor2.png" width="20px" height="20px" class="mr-1" alt="client icon"> 132.10.24.200-->
-    <!--        </div>-->
-    <!--        <div class="col-md-4 col-sm-12 d-inline-block">-->
-    <!--            <img src="/images/server.png" class="mr-1" width="20px" height="20px" alt="server icon"> Earthlink, Baghdad-->
-    <!--        </div>-->
-    <!--    </div>-->
+        <button id="reload-button" type="button" class="btn d-none mx-auto" onclick="window.location.reload()" style="border-radius: 50%;">
+            <img src="https://image.flaticon.com/icons/png/128/122/122666.png"alt="submit" width="35px" height="35px"/>
+        </button>
 
-</div>
-
-
-<script src="./javascripts/utils.js"></script>
-<script src="./javascripts/progress-bar.js"></script>
-<script src="./javascripts/update-dom.js"></script>
-<script src="./javascripts/main.js" type="text/javascript"></script>
+    <script src="./javascripts/utils.js"></script>
+    <script src="./javascripts/progress-bar.js"></script>
+    <script src="./javascripts/update-dom.js"></script>
+    <script src="./javascripts/main.js" type="text/javascript"></script>
 
 </body>
 </html>

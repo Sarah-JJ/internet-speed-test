@@ -1,16 +1,14 @@
 body {
     background: #22252e;
-    color: #cecdd3;
 }
 
-.f-24{
-    font-size: 1.3rem;
+.bg-darker{
+    background: #22252e;
 }
 
-.f-1rem{
-font-size: 1.1rem;
+#internet-speed-elements .card{
+    background: #22252e;
 }
-
 .speed-type {
     font-family: 'Comfortaa', cursive;
 }
@@ -19,9 +17,9 @@ font-size: 1.1rem;
     display: inline-block;
 }
 
-.latency .speed-type {
-    text-transform: capitalize;
-}
+/*.ping .speed-type {*/
+/*    text-transform: capitalize;*/
+/*}*/
 
 .speed-unit {
     color: #dee2e6;
@@ -29,7 +27,7 @@ font-size: 1.1rem;
     font-weight: bold;
 }
 
-.upload .speed-type, .download .speed-type {
+.upload .speed-type, .download .speed-type, .speed-type {
     /*font-weight: bold;*/
     text-transform: uppercase;
 }
@@ -42,7 +40,7 @@ font-size: 1.1rem;
     color: #e398ff;
 }
 
-.latency {
+.ping {
     /*color: #eaeaea;*/
     color: #f2c28f;
 }
@@ -54,23 +52,8 @@ font-size: 1.1rem;
     font-size: 18px;
 }
 
-
 #internet-speed-elements {
     color: #9dd7ff;
-}
-
-
-#horizontal-ruler {
-    height: 2px;
-    background-color: #9BE7FF;
-    width: 60%;
-    margin: 0 auto;
-    background-image: linear-gradient(left , #22252e 2%, #DAF5FF 50%, #22252e 98%);
-    background-image: -o-linear-gradient(left , #22252e 2%, #DAF5FF 50%, #22252e 98%);
-    background-image: -moz-linear-gradient(left , #22252e 2%, #DAF5FF 50%, #22252e 98%);
-    background-image: -webkit-linear-gradient(left , #22252e 2%, #DAF5FF 50%, #22252e 98%);
-    background-image: -ms-linear-gradient(left , #22252e 2%, rgb(218, 245, 255) 50%, #22252e 98%);
-    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, #22252e), color-stop(0.5, #9be7ff), color-stop(0.98, #22252e) );
 }
 
 #progress-bar {
@@ -82,18 +65,27 @@ font-size: 1.1rem;
     line-height: 15px;
 }
 
-#progress-bar-label{
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-}
-
 #progress-value {
     width: 50%;
     height: 8px;
     /*background-color: #26d0ea;*/
     border-radius: 5px;
 }
+
+#progress-bar-label{
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.f-24{
+    font-size: 1.3rem;
+}
+
+.f-1rem{
+    font-size: 1.1rem;
+}
+
 
 /*BOOTSTRAP*/
 /*//////////////////////////////////////*/
