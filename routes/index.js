@@ -28,15 +28,10 @@ const upload = multer({
 });
 
 
-/* GET home page. */
 router.get('/', (req, res, next) => {
-    console.log(req.connection.remoteAddress);
     res.render('index.ejs', {title: 'Internet Speed Test'});
 });
 
-router.get('/remove-on-prdct', (req, res, next) => {
-    res.render('remove-on-prdct.html', {title: 'remove-on-prdct'});
-});
 
 router.post('/', upload.single('image'), (req, res, next) => {
     res.sendStatus(200);
